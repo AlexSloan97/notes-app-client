@@ -13,6 +13,7 @@ import ResetPassword from "./containers/ResetPassword";
 import Settings from "./containers/Settings";
 import ChangePassword from "./containers/ChangePassword";
 import ChangeEmail from "./containers/ChangeEmail";
+import Billing from "./containers/Billing";
 
 export default ({ childProps }) =>
   <Switch>
@@ -21,6 +22,12 @@ export default ({ childProps }) =>
     <UnauthenticatedRoute path="/signup" exact component={Signup} props={childProps} />
     <AuthenticatedRoute path="/notes/new" exact component={NewNote} props={childProps} />
     <AuthenticatedRoute path="/notes/:id" exact component={Notes} props={childProps} />
+    <AuthenticatedRoute
+      path="/billing"
+      exact
+      component={Billing}
+      props={childProps}
+    />
     <AuthenticatedRoute
       path="/settings"
       exact
